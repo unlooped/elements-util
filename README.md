@@ -104,29 +104,29 @@ $(element).empty() // element is empty, doesn't have any childNodes anymore.
 For storing custom properties on an element.
 
 ```html
-    <div id="abc"></div>
-    <div id="def"></div>
-    <div id="ghi"></div>
-    <div id="jkl"></div>
+<div id="abc"></div>
+<div id="def"></div>
+<div id="ghi"></div>
+<div id="jkl"></div>
 ```
 
 
 ```js
-    var $ = require('elements-util/lib/storage')
-    
-    $('#abc').store('name', 'moo')
-    $('#abc').retrieve('name') // 'moo'
-    $('#abc').eliminate('name')
-    $('#abc').retrieve('name') // undefined
-    
-    $('div').store('framework', 'mootools')
-    $('div').retrieve('framework') // ['mootools', 'mootools', 'mootools', 'mootools']
-    
-    $('#def').retrieve('framework') // 'mootools'
-    $('#ghi').retrieve('framework') // 'mootools'
-    
-    $('div').eliminate('framework')
-    $('div').retrieve('framework') // undefined
-    $('#def').retrieve('framework') // undefined
-    $('#ghi').retrieve('framework') // undefined
+var $ = require('elements-util/lib/storage')
+
+$('#abc').store('name', 'moo')
+$('#abc').retrieve('name') // 'moo'
+$('#abc').eliminate('name')
+$('#abc').retrieve('name') // undefined
+
+$('div').store('framework', 'mootools')
+$('div').retrieve('framework') // ['mootools', 'mootools', 'mootools', 'mootools']
+
+$('#def').retrieve('framework') // 'mootools'
+$('#ghi').retrieve('framework') // 'mootools'
+
+$('div').eliminate('framework')
+$('div').retrieve('framework') // undefined
+$('#def').retrieve('framework') // undefined
+$('#ghi').retrieve('framework') // undefined
 ```
